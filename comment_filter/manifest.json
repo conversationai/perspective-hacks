@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+
+  "name": "Comment Filter",
+  "description": "This extension demonstrates analyzing the toxicity of comments with Perspective API",
+  "version": "2.9.2",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Click to analyze comment toxicity"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.ft.com/*",
+        "*://www.independent.co.uk/*",
+        "*://www.economist.com/*",
+        "*://www.telegraph.co.uk/*"
+      ],
+      "css": [
+        "common.css",
+        "comment-filter.css"
+      ],
+      "js": [
+        "third_party/mustache.min.js",
+        "common.js",
+        "comment-filter.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "*://commentanalyzer.googleapis.com/",
+    "*://www.independent.co.uk/",
+    "*://apis.google.com/",
+    "*://www.ft.com/",
+    "*://www.economist.com/",
+    "*://www.telegraph.co.uk/",
+    "webRequest"
+  ],
+  "web_accessible_resources": [
+    "*.svg",
+    "*.ttf",
+    "templates/*.mst",
+    "perspective.png"
+  ]
+}

@@ -1,0 +1,186 @@
+.graph-panel {
+  background-color: #F5EED1;
+  width: 800px;
+  height: auto;
+  position: fixed !important;
+  margin: 1.5em;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+  z-index: 9000000 !important;
+  padding: 25px;
+}
+
+.graph-panel header {
+  margin: -30px;
+}
+
+.ext-title {
+  text-transform: uppercase;
+  color: #706F6B;
+  font-family: 'Roboto';
+  letter-spacing: 6px;
+  text-rendering: geometricPrecision;
+  font-size: 23px;
+  padding-top: 30px;
+}
+
+.arrow {
+  width: 40%;
+  margin-left: 30%;
+}
+
+.time {
+      text-align: center;
+}
+
+#chartjs-tooltip {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  transform: translate(-50%, -110%);
+  background: white;
+  width: 200px;
+}
+
+.chart-date,
+.chart-time {
+  display: inline-block;
+}
+
+.chart-date {
+  padding-right: 50px;
+  float: left;
+}
+
+.chart-time {
+  float: right;
+  padding-bottom: 10px;
+}
+
+.graph-score {
+  clear: both;
+}
+
+#graph-panel {
+  margin: 15px;
+}
+
+.toxic-logo {
+  height: 35px;
+  padding-right: 15px;
+}
+
+.graph-low,
+.graph-moderate,
+.graph-high {
+  font-family: 'Roboto';
+  padding: 5px;
+  color: white;
+  background-color: #FB757C;
+}
+
+.graph-score {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Roboto';
+  padding: 10px;
+}
+
+.toxicGraph {
+  margin-top: 40px;
+}
+
+.small-text {
+  font-size: 15px;
+  vertical-align: super;
+  margin-bottom: 10px;
+}
+
+.graph-tooltip-title {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.graph-close-icon {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  border: 1px solid #706F6B;
+  height: 20px;
+  cursor: pointer;
+}
+
+.current-comment {
+  font-size: 12px;
+}
+
+.graph-filter {
+  -webkit-appearance: none;
+  border: none;
+  background: none;
+  border: 1px solid #706F6B;
+  color: #706F6B;
+  border-radius: 0;
+  padding: 5px 40px 5px 17px;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+
+.filter-container {
+  position: absolute;
+  bottom: 325px;
+  right: 25px;
+  background-image: url('chrome-extension://__MSG_@@extension_id__/down-grey.svg');
+  background-repeat: no-repeat;
+  background-position: 94%;
+  cursor: pointer;
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.graph-date {
+  background: white;
+  color: black;
+  font-size: 11px;
+  padding: 10px;
+}
+
+.tooltip-comment {
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 14px;
+  width: auto;
+  overflow: hidden;
+  padding: 0;
+  max-height: 40px;
+  margin: 15px;
+  position: relative;
+}
+
+.tooltip-comment::after {
+  content: '...';
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: black;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+}
+
+
+/* Overrides from common info panel */
+.graph-panel .info-panel {
+  position: static !important;
+  width: 100%;
+}
+
+.info-panel {
+  background-color: #FAF8F0;
+  box-shadow: none;
+}
+
+.info-panel__title {
+  letter-spacing: 1px;
+}

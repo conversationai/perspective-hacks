@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Toxicity Timeline",
+  "description": "This extension demonstrates analyzing the toxicity of comments with Perspective API",
+  "version": "6.0.5",
+  "browser_action": {
+    "default_title": "Toxicity Timeline",
+    "default_icon": {
+      "512": "icon.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.ft.com/*",
+        "*://*.independent.co.uk/*",
+        "*://*.economist.com/*",
+        "*://*.telegraph.co.uk/*"
+      ],
+      "css": [
+        "common.css",
+        "graph-info-panel.css"
+      ],
+      "js": [
+        "third_party/date.js",
+        "third_party/mustache.min.js",
+        "third_party/Chart.bundle.min.js",
+        "graph-panel.js",
+        "common.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "*://commentanalyzer.googleapis.com/",
+    "*://www.independent.co.uk/",
+    "*://apis.google.com/",
+    "*://www.ft.com/",
+    "*://www.economist.com/",
+    "*://www.telegraph.co.uk/",
+    "webRequest"
+  ],
+  "web_accessible_resources": [
+    "*.svg",
+    "bg.png",
+    "perspective.png",
+    "*.ttf",
+    "templates/*.mst"
+  ]
+}

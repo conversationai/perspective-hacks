@@ -1,0 +1,218 @@
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.comment-filter.info-panel {
+  color: #289193;
+  font-family: 'Poppins';
+}
+
+.comment-filter .info-panel__header,
+.comment-filter .info-panel__description-wrapper {
+  background: #53ebd4;
+}
+
+.comment-filter .info-panel__controls a,
+.comment-filter .info-panel__controls a:visited {
+  color: #fff;
+  font-weight: 600;
+}
+
+.comment-filter .info-panel__title {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-top: 0;
+}
+
+.comment-filter .info-panel__subtitle {
+  color: #289193;
+  font-size: 16px;
+}
+
+.comment-filter .info-panel__details {
+  border-top: none;
+}
+
+.comment-filter__control {
+  background: #53ebd4;
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-filter__publishers {
+  color: #289193;
+  font-size: 16px;
+}
+
+.comment-filter__publishers-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1em;
+}
+
+.comment-filter__publishers-list li {
+  line-height: 2rem;
+}
+
+.comment-filter__publishers-list a,
+.comment-filter__publishers-list a:visited {
+  border-bottom: 0;
+  color: #289193;
+  font-size: 16px;
+}
+
+.comment-filter__publishers-list a:hover,
+.comment-filter__publishers-list a:active {
+  color: #222;
+}
+
+.comment-filter__comment {
+  font-weight: 300;
+}
+
+.comment-filter__comment-count {
+  display: block;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  margin: 0;
+  text-align: center;
+}
+
+.comment-filter__comments-hidden,
+.comment-filter__comments-total {
+  color: #fff;
+}
+
+.comment-filter__comment-count-label {
+  color: #289193;
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.comment-filter__toxicity-range {
+  align-content: stretch;
+  color: #289193;
+  font-weight: 600;
+  width: 75%;
+}
+
+.toxicity-range {
+  margin: 15px 0;
+}
+
+input[type=range] {
+  display: block;
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  width: 95%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  margin-top: -10px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  cursor: pointer;
+  background: #32CBB8;
+  border-radius: 1px;
+  border: 0.2px solid #32CBB8;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #fff);
+}
+
+/* Toxic comment styles for various publishers */
+.comment-filtered .toxic.toxic-hidden .fyre-comment,
+.comment-filtered .toxic.toxic-hidden > div > .comment-body,
+.comment-filtered .toxic.toxic-hidden div.gig-comment-body {
+  opacity: .6;
+  filter: blur(2px);
+}
+
+.comment-filtered .toxic .fyre-comment,
+.comment-filtered .toxic > div > .comment-body,
+.comment-filtered .toxic div.gig-comment-body {
+  padding: 10px 10px 5px !important;
+}
+
+.toxic-reveal {
+  display: none;
+}
+
+.toxic-hide {
+  display: block;
+}
+
+.toxic-hidden .toxic-reveal {
+  display: block;
+}
+
+.toxic-hidden .toxic-hide {
+  display: none;
+}
+
+.comment-filtered .toxic .toxic-message {
+  padding: 5px 10px;
+  display: block;
+  background: #98f3e5;
+  color: #289193 !important;
+}
+
+.toxic .toxic-message span {
+  color: inherit;
+  font-family: 'Poppins' !important;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.toxic .toxic-message:hover {
+  cursor: pointer;
+  color: #289193 !important;
+  background: #53ebd4;
+}
+
+.toxic .toxic-message {
+  display: none;
+}

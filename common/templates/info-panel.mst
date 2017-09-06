@@ -1,0 +1,22 @@
+<div id="info-panel" class="info-panel">
+  <div class="info-panel__header info-panel__inner">
+    <div class="info-panel__logo">
+      <h3 class="info-panel__title">{{title}}</h3>
+    </div>
+    <div class="info-panel__controls">
+      <a id="info-toggle" class="info-panel__details-toggle">
+        INFO
+        <img src="{{downArrow}}" class="info-panel__caret" />
+      </a>
+      <img src="{{closeIcon}}" class="info-panel__close-icon" />
+    </div>
+  </div>
+  <div class="info-panel__details">
+    {{#description}}
+    <div class="info-panel__description-wrapper info-panel__inner">
+      <p class="info-panel__subtitle">{{subtitle}}</p>
+      <p class="info-panel__description">{{description}}</p>
+    </div>
+    {{/description}}
+  </div>
+</div>

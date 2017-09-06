@@ -1,0 +1,27 @@
+{
+  "name": "chrome-extensions",
+  "version": "1.0.0",
+  "description": "Chrome extensions for Perspective API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "review": "git push origin HEAD:refs/for/master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://webmaster.googlesource.com/perspective/chrome-extensions"
+  },
+  "keywords": [
+    "perspective"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "chart.js": "^2.6.0",
+    "concat": "^1.0.3",
+    "copy": "^0.3.0",
+    "download-file": "^0.1.5",
+    "mustache": "^2.3.0",
+    "recursive-copy": "^2.0.6"
+  }
+}

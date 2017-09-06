@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+
+  "name": "Hot Topics",
+  "description": "Predicts the toxicity of your message based upon the average toxicity of an article. Powered by Perspective API.",
+  "version": "0.8.3",
+
+  "browser_action": {
+    "default_title": "Hot Topics"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://bradleyg.github.io/perspectives-hacks/hot_topics/example/index.html"
+      ],
+      "css": ["common.css", "sr-info-panel.css"],
+      "js": ["third_party/mustache.min.js", "common.js", "main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "webRequest"
+  ],
+  "web_accessible_resources": [
+    "parsed-data.json",
+    "*.ttf",
+    "*.svg",
+    "*.png",
+    "templates/*.mst"
+  ]
+}

@@ -1,0 +1,137 @@
+/**
+ * Copyright 2017 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.info-panel {
+  background-color: #fff;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+  color: #222;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  width: 600px;
+  position: fixed !important;
+  margin: 0;
+  right: 20px;
+  top: 60px;
+  z-index: 5000001 !important;
+  text-rendering: geometricPrecision;
+}
+
+.info-panel--hidden {
+  display: none;
+}
+
+.info-panel__details p {
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+}
+
+.info-panel__inner {
+  padding: 15px 30px;
+}
+
+.info-panel a,
+.info-panel a:visited {
+  color: #000;
+  border: 0;
+  text-decoration: none;
+}
+
+.info-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-panel__logo {
+  display: flex;
+  align-items: center;
+}
+
+.info-panel__logo--image {
+  width: 25px;
+  margin-right: 18px;
+}
+
+.info-panel__logo--text {
+  margin: 0 0 0 10px;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.info-panel__title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  margin: 10px 0 0;
+}
+
+.info-panel__subtitle {
+  color: #000;
+  font-size: 17px;
+  line-height: 1;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+}
+
+.info-panel__controls {
+  display: flex;
+  align-items: center;
+}
+
+.info-panel__details-toggle {
+  color: #222;
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+  padding: 0 8px;
+  cursor: pointer;
+}
+
+.info-panel__details {
+  border-top: 1px solid #dadada;
+  display: none;
+}
+
+.info-panel__details--visible .info-panel__details-open {
+  display: none;
+}
+
+.info-panel__details--visible .info-panel__details,
+.info-panel__details--visible .info-panel__details-close {
+  display: block;
+}
+
+.info-panel__close-icon {
+  height: 20px;
+  cursor: pointer;
+}
+
+.info-panel__details--visible .info-panel__caret {
+  transform: rotate(180deg);
+}

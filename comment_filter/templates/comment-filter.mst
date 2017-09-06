@@ -1,0 +1,28 @@
+<div class="comment-filter__control info-panel__inner">
+  <div class="comment-filter__toxicity-range">
+    <span>Toxicity threshold: </span>
+    <span id="toxicity-threshold" class="toxicity-range__label">
+      {{toxicityThresholdPercent}}%
+    </span>
+    <input id="toxicity-range"
+           class="toxicity-range"
+           type="range"
+           value="{{toxicityThreshold}}"
+           min="0"
+           max="1"
+           step=".001" /></span>
+  </div>
+  <div class="comment-filter__comment">
+    <p id="comment-filter__comment-count"
+       class="comment-filter__comment-count">
+      <span id="comment-filter__comments-hidden"
+            class="comment-filter__comments-hidden">
+      </span>/<span id="comment-filter__comments-total"
+          class="comment-filter__comments-total">
+      </span>
+    </p>
+    <span class="comment-filter__comment-count-label">
+      comments hidden
+    </span>
+  </div>
+</div>

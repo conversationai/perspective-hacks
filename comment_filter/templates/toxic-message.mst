@@ -1,0 +1,4 @@
+<a class="toxic-message">
+  <span class="toxic-reveal">Reveal comment ({{toxicityPercent}}% toxic)</span>
+  <span class="toxic-hide">Hide toxic comment</span>
+</a>

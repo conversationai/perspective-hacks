@@ -1,0 +1,10 @@
+<div class="comment-filter__publishers info-panel__inner">
+  <p>Easily find and hide comments based on their level of toxicity, on comment-enabled articles from:</p>
+  <ul class="comment-filter__publishers-list">
+    {{#publishers}}
+    <li>
+      <a href="{{url}}" target="_blank">{{title}}</a>
+    </li>
+    {{/publishers}}
+  </ul>
+</div>
