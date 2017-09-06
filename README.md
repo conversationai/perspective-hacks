@@ -16,9 +16,9 @@ Follow [Load The Extension](https://developer.chrome.com/extensions/getstarted#u
 
 ## The Hacks
 
- * [Toxicity Timeline]: See exactly when negative conversations happen and discover the patterns behind them.
- * [Hot Topics]: Compare unpublished articles with others that have created debate - before you push them live.
- * [Comment Blur Filter]: Easily find and hide comments based on your tolerance for toxicity.
+ * [Toxicity Timeline](toxicity_timeline/README.md): See exactly when negative conversations happen and discover the patterns behind them.
+ * [Hot Topics](hot_topics/README.md): Compare unpublished articles with others that have created debate - before you push them live.
+ * [Comment Blur Filter](comment_filter/README.md): Easily find and hide comments based on your tolerance for toxicity.
 
 ## Note
 This is example code to help experimentation with the Perspective API; it is not an official Google product.
