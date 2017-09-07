@@ -1,4 +1,5 @@
 ## Comment Blur Filter
+Code by raisaveuc gurmukhp, bradleyg
 
 Easily find and hide comments based on your tolerance for toxicity.
 
