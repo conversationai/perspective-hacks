@@ -1,3 +1,4 @@
+Code by [raisaveuc](https://github.com/raisaveuc), [gurmukhp](https://github.com/gurmukhp), [bradleyg](https://github.com/bradleyg)
 
 ## Toxicity Timeline
 See exactly when negative conversations happen and discover the patterns behind them.
