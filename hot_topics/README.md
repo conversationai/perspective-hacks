@@ -1,3 +1,5 @@
+Code by [raisaveuc](https://github.com/raisaveuc), [gurmukhp](https://github.com/gurmukhp), [bradleyg](https://github.com/bradleyg)
+
 ## Hot Topics
 
 Compare unpublished articles with others that have created debate – before you push them live.
