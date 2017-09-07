@@ -1,6 +1,6 @@
-## Comment Blur Filter
-Code by raisaveuc gurmukhp, bradleyg
+Code by [raisaveuc](https://github.com/raisaveuc), [gurmukhp](https://github.com/gurmukhp), [bradleyg](https://github.com/bradleyg)
 
+## Comment Blur Filter
 Easily find and hide comments based on your tolerance for toxicity.
 
 <img src="http://services.google.com/fh/files/misc/ph_comment_filter_1.gif" width="600">
