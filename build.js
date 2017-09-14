@@ -22,7 +22,7 @@ const emptyDir = require('empty-dir');
 const downloadFile = require('download-file');
 
 const projectFolders = [
-  'hot_topics', 'toxicity_timeline', 'toxic_trainer', 'comment_filter'
+  'hot_topics', 'toxicity_timeline', 'comment_filter'
 ];
 
 const outputFolder = './dist';
