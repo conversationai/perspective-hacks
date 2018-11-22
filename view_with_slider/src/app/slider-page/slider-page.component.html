@@ -1,0 +1,20 @@
+<div class="page">
+  <h1>We asked the internet what they thought about Climate Change...</h1>
+  <div class="slider-and-selector">
+    <div class="slider">
+      <app-perspective-slider #slider fractionalValue="0.7"></app-perspective-slider>
+    </div>
+    <mat-form-field class="model-selector">
+      <mat-select [(value)]="selectedModel">
+        <mat-option *ngFor="let model of models" [value]="model.id">{{ model.name }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="comments">
+    <div class="comment" *ngFor="let c of comments"
+      [@thresholdState]="c.scores[selectedModel] > slider.fractionalValue ? 'belowThreshold' : 'aboveThreshold'">
+      <app-scored-comment
+        [comment]="c" [model]="selectedModel" [threshold]="slider.fractionalValue"></app-scored-comment>
+    </div>
+  </div>
+</div>

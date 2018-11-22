@@ -1,0 +1,27 @@
+<div class="page">
+  <h1>What do you think about Climate Change...</h1>
+  <div *ngIf="!submittedText">
+    <mat-form-field class="comment-input">
+      <textarea matInput id="input" placeholder="what will you say?"
+                [(ngModel)]="textValue"></textarea>
+    </mat-form-field>
+    <div class="feedback-container">
+      <convai-checker class="feedback"
+        inputId="input"
+        [demoSettings]="checkerSettings">
+      </convai-checker>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" (click)="addComment()"
+        [disabled]="textValue.length == 0">Submit</button>
+    </div>
+  </div>
+  <div *ngIf="submittedText">
+    <div class="response-container">
+      <div><span class="yousay">You say... </span><span class="comment">{{textValue}}</span></div>
+      <div class="saymore">
+        <button mat-raised-button (click)="sayMore()">Say more</button>
+      </div>
+    </div>
+  </div>
+</div>

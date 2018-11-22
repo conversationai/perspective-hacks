@@ -1,0 +1,36 @@
+.slider {
+  min-width: 350px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-top:5px;
+}
+
+.page {
+  margin: 20px;
+}
+
+.slider-and-selector {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin-left:-15px;
+}
+
+.model-selector {
+  flex: none;
+}
+
+.comments {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: left;
+  width: 100%;
+}
+
+.comment {
+  min-width: 200px;
+  max-width: 400px;
+}

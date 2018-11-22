@@ -1,0 +1,10 @@
+<div class="comment {{comment.scores.TOXICITY > threshold ? 'obscured' : 'seen'}}">
+  <div class="icon {{iconStyle()}}">
+  </div>
+  <div class="text">
+      {{comment.text}}
+  </div>
+  <div class="scores">
+      {{comment.scores[this.model].toFixed(2)}}
+  </div>
+</div>

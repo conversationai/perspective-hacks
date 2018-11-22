@@ -1,0 +1,48 @@
+.page {
+  margin: 20px;
+}
+
+.comment-input {
+  width: 100%;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+
+.feedback-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.response-container {
+  width: 100%;
+  text-align: center;
+}
+
+.feedback {
+  min-width: 300px;
+  max-width: 500px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.yousay {
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.comment {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.saymore {
+  margin-top:10px;
+}
