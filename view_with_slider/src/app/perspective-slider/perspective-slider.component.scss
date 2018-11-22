@@ -1,0 +1,283 @@
+
+@mixin type($font-size, $line-height) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size + px;
+  line-height: $line-height + px;
+}
+
+// Cannot be tabbled to.
+  .-visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px); /* IE6, IE7 */
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+    position: absolute !important;
+  }
+
+  // Can be tabbed to, but is not shown.
+  .-off-screen {
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    height: 1px;
+    width: 1px;
+    margin: 0;
+    overflow: hidden;
+    position: absolute !important;
+  }
+
+  .slider-wrapper {
+    display: flex;
+    align-items: center;
+    // -20 to make buttons be sensibly close to left & right edges.
+    // margin: 0px -20px;
+
+    .icon {
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 0;
+      -webkit-appearance: none;
+
+      &.circle {
+        background-color: #25C1F9;
+        border-radius: 50%;
+        height: 12px;
+        width: 12px;
+        transform: translateZ(0);
+      }
+
+      &.diamond {
+        background-color: #d7d7d7;
+        height: 12px;
+        width: 12px;
+        transform: rotate(45deg) translateZ(0);
+      }
+    }
+    ._active {
+      .diamond {
+        background-color: #D400F9;
+      }
+    }
+  }
+
+  // The bottons at the left and right of the slider.
+  .tolerance-button {
+    background: transparent;
+    border: 0;
+    padding: 20px;
+  }
+
+  // TODO: should not need a form.
+  form {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: visible;
+    z-index: 100;
+  }
+
+  .slider-shell {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    overflow: visible;
+    height: 3px;
+  }
+
+  .slider-track {
+    border: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .slider-fill {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #D7D7D7;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .slider-thumb {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    overflow: visible;
+    left: 0;
+    top: 50%;
+    border: 0 none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    transition: transform 150ms ease-out;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 3;
+
+    .shape {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      transition: transform 150ms ease-out, border-radius 150ms ease-out;
+      transform: rotate(0deg);
+      transform-origin: center center;
+      box-shadow: 0 0 6px 0 rgba(0,0,0,0.24);
+    }
+
+    &.square {
+      .shape {
+        border-radius: 0;
+        transform: rotate(0deg);
+      }
+    }
+
+    &.diamond {
+      .shape {
+        border-radius: 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &.focused {
+      transform: translateY(-40px);
+
+      .shape {
+        left: 0;
+        top: 0;
+        transform: translateY(-3px) scale(0.6);
+        box-shadow: none;
+      }
+      &.diamond {
+        .shape {
+          transform: translateY(-3px) scale(0.6) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .slider-value {
+    display: none;
+  }
+
+  .blurb {
+    color: #fff;
+    @include type(12, 17);
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  input.slider {
+    cursor: pointer;
+    width: calc(100% + 12px);
+    transform: translateX(-6px);
+    height: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+  }
+
+  input.slider::-ms-track {
+    width: 100%;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+  }
+
+  input.slider::-moz-range-track {
+    width: 100%;
+    height: 100%;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+    background: transparent;
+    color: transparent;
+    overflow: visible;
+  }
+
+  input.slider:focus::-webkit-slider-runnable-track {
+    background: transparent;
+    border: transparent;
+  }
+
+  input.slider:focus {
+    outline: none;
+  }
+
+  /* Slider input thumbs are invisible but bigger than visual slider thumb,
+  in order to make it easier to grab esp on touch 	*/
+
+  input.slider::-ms-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    border: 0 none;
+    background: transparent;
+  }
+
+  input.slider::-moz-range-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    border: 0 none;
+    background: transparent;
+  }
+
+  input.slider::-webkit-slider-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    border: 0 none;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+//   /* microsoft IE10+ and Edge - eliminates default fills before and after thumb */
+
+  input.slider::-ms-fill-lower {
+    background: transparent;
+    border: 0 none;
+  }
+
+  input.slider::-ms-fill-upper {
+    background: transparent;
+    border: 0 none;
+  }
+
+  input.slider::-ms-tooltip {
+    display: none;
+  }

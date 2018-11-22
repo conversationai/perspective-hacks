@@ -1,0 +1,31 @@
+<div class="slider-wrapper">
+  <button #sliderCircleElem class="tolerance-button">
+    <span aria-role="none" class="icon circle"></span>
+    <span class="-visually-hidden">Set comment slider to 0 percent</span>
+  </button>
+  <form ng-controller="fractionValue">
+    <div class="slider-shell">
+      <div #sliderFillElem class="slider-fill"></div>
+      <div #sliderTrackElem class="slider-track"></div>
+      <div #sliderThumbElem class="slider-thumb">
+        <div #sliderThumbShape class="shape"></div>
+        <app-slider-thumb
+          [focused]="sliderFocused"
+          [attractJustFinished]="attractFinished"
+          (handleUpdated)="handleUpdated($event)"></app-slider-thumb>
+      </div>
+      <label for="tolerance" class=-off-screen>Tolerance</label>
+      <input id="tolerance" #sliderInput
+        class="slider"
+        type="range" min="0" max="1"
+        [value]="fractionValue"
+        step="0.001"
+        (change)="setTolerance(sliderInput.value)"
+        (input)="setTolerance(sliderInput.value)"/>
+    </div>
+  </form>
+  <button #sliderDiamondElem class="tolerance-button">
+    <span aria-role="none" class="icon diamond"></span>
+    <span class="-visually-hidden">Set comment slider to 100 percent</span>
+  </button>
+</div>

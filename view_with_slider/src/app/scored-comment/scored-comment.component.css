@@ -1,0 +1,59 @@
+.comment {
+  /* transition: opacity 0.5s; */
+  /* transition: all 300ms ease-in-out; */
+  color: #333;
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 5px;
+  display: inline-flex;
+}
+
+.scores {
+  margin-left: 5px;
+  padding: 2px;
+  opacity: 0;
+  display: block;
+  text-align: right;
+  font-size: 70%;
+}
+
+.comment:hover .scores {
+  opacity: 0.7;
+}
+
+.icon {
+  transition: opacity 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transform: translate3d(0px, 0px, 0px);
+
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  margin-right: 15px;
+  margin-top: 6px;
+
+  display: inline-block;
+  flex: none;
+}
+
+.square {
+  margin-top: 4px;
+  background-color: #7C4DFF;
+  border-radius: 0;
+}
+
+.circle {
+  background-color: #25C1F9;
+  border-radius: 50%;
+}
+
+.diamond {
+  margin-top: 3px;
+  border-radius: 0;
+  background-color: #D400F9;
+  transform:rotate(45deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
