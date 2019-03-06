@@ -1,0 +1,197 @@
+/**
+ * Copyright 2018 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+
+body {
+  color: #57535A;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.highlighter-header {
+  font-size: 14px;
+  margin: 1rem 0 .4rem;
+}
+
+.highlighter-selection {
+  margin-top: 0;
+}
+
+svg {
+  pointer-events: none;
+}
+
+.highlighter-summary {
+  width: 250px;
+}
+
+/* Instagram has some pretty generic styles added to div, reset them here */
+.highlighter-panel,
+.highlighter-panel div {
+  /* -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; */
+  border: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox; */
+  display: block;
+  -webkit-box-orient: inline-axis;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  /* -ms-flex-direction: row; */
+  flex-direction: row;
+  -webkit-flex-shrink: 1;
+  /* -ms-flex-negative: 1; */
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.highlighter-panel div {
+  position: relative;
+}
+
+.highlighter-panel {
+  width: 250px;
+  height: 95px;
+  opacity: 0;
+}
+
+div.highlighter-faces, div.highlighter-loading, div.highlighter-success, div.highlighter-error {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 87%;
+  width: 97%;
+}
+
+div.highlighter-success, div.highlighter-loading, div.highlighter-error {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+div.highlighter-error {
+  flex-direction: row;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+div.highlighter-error-caption {
+  width: calc(100% - 62px);
+}
+
+div.highlighter-loading-svg {
+  width: 42px;
+  height: 42px;
+}
+
+div.highlighter-tick {
+  width: 42px;
+  height: 42px;
+}
+
+.highlighter-face {
+  transform: scale(1);
+  color: #f5f4f2;
+  cursor: pointer;
+  text-align: center;
+  transition: transform .5s, color .5s;
+  width: 100%;
+}
+
+.highlighter-face:hover {
+  transform: scale(1.1);
+  color: #ffd68c;
+}
+
+.highlighter-face-feature {
+  transition: fill .5s;
+}
+
+.highlighter-face-caption {
+  color: rgb(153, 153, 153);
+}
+
+.highlighter-face:hover .highlighter-face-feature {
+  fill: rgb(87, 83, 90);
+}
+
+div.highlighter-faces {
+  display: flex;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.highlighter-sent .highlighter-faces {
+  opacity: 0;
+}
+
+.highlighter-sent .highlighter-success {
+  opacity: 1;
+}
+
+div.highlighter-tick-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+}
+
+div.highlighter-title {
+  font-size: 12px;
+  margin-bottom: 4px;
+  font-weight: 600;
+  margin-top: 0;
+  font-weight: 600;
+}
+
+div.highlighter-error-caption {
+  font-size: 11px;
+  font-weight: 300;
+}
+
+div.highlighter-error-message {
+  display: block;
+  line-height: 1.4;
+}
+
+div.highlighter-cross {
+  height: 42px;
+  width: 42px;
+  margin-right: 15px;
+}
+
+.highlighter-bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
