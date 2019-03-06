@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.2 33.2" data-spirit-id="happy-face-svg">
-  <circle cx="16.6" cy="16.6" r="16.6" fill="currentColor" data-spirit-id="healthy-face-face"/>
-  <circle fill="#b2b2b2" cx="11.9" cy="11.8" r="1.8" data-spirit-id="healthy-face-left-eye"/>
-  <circle fill="#b2b2b2" cx="21.3" cy="11.8" r="1.8" data-spirit-id="healthy-face-right-eye"/>
-  <path fill="#b2b2b2" d="M16.9 23.4c-4.4 0-7.7-1.5-7.9-1.6-.4-.2-.6-.7-.4-1.1.2-.4.7-.6 1.1-.4.1 0 7 3.3 14 0 .4-.2.9 0 1.1.4s0 .9-.4 1.1c-2.7 1.2-5.2 1.6-7.5 1.6z" data-spirit-id="healthy-face-mouth"/>
-</svg>
