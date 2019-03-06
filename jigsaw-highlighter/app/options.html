@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+
+<head>
+  <!-- build:css styles/options-vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link href="styles/mdc.select.min.css" rel="stylesheet">
+  <link href="styles/mdc.textfield.min.css" rel="stylesheet">
+  <link href="styles/mdc.button.min.css" rel="stylesheet">
+  <link href="styles/mdc.checkbox.min.css" rel="stylesheet">
+  <link href="styles/mdc.form-field.min.css" rel="stylesheet">
+  <link href="styles/mdc.typography.min.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body class="mdc-typography">
+  <h2 class="mdc-typography--headline">Submission options</h2>
+  <div class="mdc-form-field">
+    <div class="mdc-checkbox submission-option">
+      <input type="checkbox"
+              id="submit-perspective"
+              data-target="submitToPerspective"
+              class="mdc-checkbox__native-control"/>
+      <div class="mdc-checkbox__background">
+        <svg class="mdc-checkbox__checkmark"
+              viewBox="0 0 24 24">
+          <path class="mdc-checkbox__checkmark__path"
+                fill="none"
+                stroke="white"
+                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+        </svg>
+        <div class="mdc-checkbox__mixedmark"></div>
+      </div>
+    </div>
+    <label for="submit-perspective">Submit to Perspective</label>
+  </div>
+
+  <div class="mdc-form-field">
+    <div class="mdc-checkbox submission-option">
+      <input type="checkbox"
+              id="submit-spreadsheet"
+              data-target="submitToSpreadsheet"
+              class="mdc-checkbox__native-control"/>
+      <div class="mdc-checkbox__background">
+        <svg class="mdc-checkbox__checkmark"
+              viewBox="0 0 24 24">
+          <path class="mdc-checkbox__checkmark__path"
+                fill="none"
+                stroke="white"
+                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+        </svg>
+        <div class="mdc-checkbox__mixedmark"></div>
+      </div>
+    </div>
+    <label for="submit-spreadsheet">Submit to Spreadsheet</label>
+  </div>
+  <div class="mdc-text-field spreadsheet-field">
+    <input id="highlighter-spreadsheet-url" class="mdc-text-field__input" placeholder="Google Spreadsheet URL" rows="8" cols="40"></input>
+  </div>
+  <span class="options-error">Invalid spreadsheet URL</span>
+  <!-- <h2 class="mdc-typography--headline">API Key</h2>
+  <div class="mdc-text-field">
+    <input type="text" id="text-field-no-js" class="mdc-text-field__input" placeholder="dsfsdf-sdfsdfs-dfsdf" disabled>
+    <div class="mdc-text-field__bottom-line"></div>
+  </div> -->
+
+  <!-- build:js scripts/options-vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/options.js -->
+  <script src="scripts/options.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
