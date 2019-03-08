@@ -1,0 +1,34 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.0.67",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "identity",
+    "storage",
+    "activeTab",
+    "https://commentanalyzer.googleapis.com/"
+  ],
+  "optional_permissions": [
+    "https://script.google.com/"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "Jigsaw Highlighter",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": ["images/*.svg", "scripts/popup.js"],
+  "content_security_policy": "script-src 'self' https://script.google.com; object-src 'self'"
+}
