@@ -13,10 +13,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireFunctionsModule } from 'angularfire2/functions';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 
 import { ConvaiCheckerModule } from '@conversationai/perspectiveapi-authorship-demo';

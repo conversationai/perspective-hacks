@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
 import { PerspectiveSliderComponent } from './perspective-slider/perspective-slider.component';
 import { SliderThumbComponent } from './perspective-slider/slider-thumb/slider-thumb.component';
 import { SliderPageComponent } from './slider-page/slider-page.component';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 
 describe('AppComponent', () => {

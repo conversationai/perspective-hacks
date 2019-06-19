@@ -7,7 +7,7 @@
  * https://www.apache.org/licenses/LICENSE-2.0.html
  */
 import { Component } from '@angular/core';
-import { AngularFirestore } from 'angularfire2/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable, Observer } from 'rxjs';
 // import { Observable, Observer } from 'rxjs';
 import { ScoredComment, commentKey } from '../comment_util';

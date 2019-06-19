@@ -8,7 +8,7 @@
  */
 // TODO: Support specifying of models being checked.
 import { Component, OnInit } from '@angular/core';
-// import { AngularFirestore } from 'angularfire2/firestore';
+// import { AngularFirestore } from '@angular/fire/firestore';
 import {
   DemoSettings,
   LoadingIconStyle,
@@ -16,7 +16,7 @@ import {
   ScoreThreshold
 } from '@conversationai/perspectiveapi-authorship-demo';
 import { environment } from '../../environments/environment';
-import { AngularFireFunctions } from 'angularfire2/functions';
+import { AngularFireFunctions } from '@angular/fire/functions';
 import { Observable } from 'rxjs';
 
 import { CommentToScore, ScoredComment } from '../comment_util';

@@ -7,10 +7,12 @@
  * https://www.apache.org/licenses/LICENSE-2.0.html
  */
 
-// Minimal naming tool to create fresh names.
-// TODO: instread of monotonically increasing IDs, use a dedicated safe
-// namespace object. That will allow graphs to live a long time and have
-// arbitray length sequences of transformation without going over integer
+// Minimal (global) naming tool to create fresh names. Used for names of edges
+// and nodes.
+//
+// TODO: instead of monotonically increasing IDs, use a dedicated safe
+// namespaces. That will allow graphs to live a long time and have
+// arbitray length sequences of transformations without going over integer
 // size limits.
 class StringNamer {
   lastNameId = 0;
@@ -32,8 +34,9 @@ export function oppRel(e: RelKind): RelKind {
   else { return '='; }
 }
 
-// Note: Edges are undirected; direction lives in the RelKind.
-// This is implemented maintaining the invariuant: id1 < id2.
+// Note: Edges are undirected; direction lives in the RelKind. This is
+// implemented by maintaining the invariant that for all edges the name of the
+// first node it connects to is <= the name of the second node: id1 < id2.
 export class Edge {
   name: string;
   id1: string;
@@ -107,7 +110,7 @@ export class RelGraph<T> {
     }
   }
 
-  relatedNodesNames(rel: RelKind, node: Node<T>): string[] {
+  relatedNodeNames(rel: RelKind, node: Node<T>): string[] {
     return node.edges.filter(e =>
         (this.edges[e].id1 === node.name
           && this.edges[e].rel === rel) ||
@@ -116,7 +119,7 @@ export class RelGraph<T> {
   }
 
   relatedNodes(kind: RelKind, node: Node<T>): Node<T>[] {
-    const nodeNames = this.relatedNodesNames(kind, node);
+    const nodeNames = this.relatedNodeNames(kind, node);
     return nodeNames.map(name => this.nodes[name]);
   }
 
