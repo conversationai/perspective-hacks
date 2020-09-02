@@ -58,6 +58,6 @@
     "@material/textfield": "^0.26.0",
     "@material/typography": "^0.3.0",
     "google-auth-library": "^2.0.0",
-    "googleapis": "^25.0.0"
+    "googleapis": "^59.0.0"
   }
 }
